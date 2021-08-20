@@ -1,0 +1,29 @@
+{% extends "main_page.html" %}
+{% block Sekme_adı %}
+İçerikler
+{% endblock  %}
+{% block sayfa_rengi %}
+<style>
+  body{
+      background-color: #ccccff
+      }
+</style>
+{% endblock sayfa_rengi %}
+{% block govde %}
+<h3>İçerikler</h3>
+        
+
+
+{% if icerikler %}
+<ul class="list-group list-group-flush">
+  {% for icerik in icerikler %}
+  <li class="list-group-item"><a href="/content/{{icerik.id}}">{{icerik.Title}}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class = "alert alert-danger">Bir İçerik Oluşturmaya Ne Dersin?</div>
+{% endif %}
+
+
+
+{% endblock  %}

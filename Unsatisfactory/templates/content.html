@@ -1,0 +1,25 @@
+{% extends "main_page.html" %}
+{% block Sekme_adı %}
+İçerik
+{% endblock  %}
+{% block sayfa_rengi %}
+<style>
+  body{
+      background-color: #ccccff
+      }
+</style>
+{% endblock  %}
+{% block govde %}
+{% if icerik %}
+
+<h3>{{icerik.Title}}</h3>
+<hr>
+<h5>Yazar = {{icerik.Author}}</h5>
+<hr>
+<h5>Yazar = {{icerik.Author}}</h5>
+<hr>
+{{icerik.Content | safe}}
+{% else %}
+<div class = "alert alert-warning">Maalesef bir makale yok</div>
+{% endif %}
+{% endblock  %}

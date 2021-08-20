@@ -1,0 +1,18 @@
+{% extends "main_page.html" %}
+{% block Sekme_adı %}
+Admin Giriş
+{% endblock  %}
+{% block govde %}
+{% from "includes/form_helpers.html" import render_field %}
+<h3>Giriş</h3>
+<hr>
+
+<form method = "POST">
+  
+    {{ render_field(form.username) }}
+    {{ render_field(form.password) }}
+  
+  <p><input type=submit value=Login>
+</form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "main_page.html" %}
+{% block Sekma_adı %}
+Admin Kayıt Sayfası
+{% endblock Sekma_adı %}
+
+{% block govde %}
+{% from "includes/form_helpers.html" import render_field %}
+<h3>Kayıt Olun</h3>
+<hr>
+
+<form method = "POST">
+  
+    {{ render_field(form.username) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.password) }}
+    {{ render_field(form.confirm) }}
+    {{ render_field(form.name_surname) }}
+  
+  <p><input type=submit value=Register>
+</form>
+
+{% endblock %}

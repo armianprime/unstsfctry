@@ -1,0 +1,21 @@
+{% extends "main_page.html" %}
+{% block Sekme_adı %}
+İçerik Düzenleyicisi
+{% endblock  %}
+{% block govde %}
+<h3>İçerik Güncelleme</h3>
+<hr>
+{% from "includes/form_helpers.html" import render_field %}
+
+
+<form method = "POST">
+  
+    {{ render_field(form.title, class ="form-control")}}
+    {{ render_field(form.content, class ="form-control") }}
+  
+    <a href="/dashboard">
+        <button type="submit" class="btn btn-success" >Güncelle</button>
+    </a>
+</form>
+
+{% endblock  %}

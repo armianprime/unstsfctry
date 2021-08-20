@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <title>{% block Sekme_adı %}
+        Ana Sayfa
+    {% endblock Sekme_adı %}</title>
+</head>
+{% block sayfa_rengi %}
+<style>
+    body{
+        background-color: #ddddbb
+        }
+</style>
+{% endblock sayfa_rengi %}
+<body>
+
+
+{% include "includes/navbar.html" %}
+    <br><br><br>
+    <div class = "container">
+        {% include "includes/messages.html" %}
+        
+        {% block govde %}
+        <img src="{{ url_for('static', filename = 'images/main_page.jpg') }}" width = "1108px" >
+        <div class = "jumbotron text-center" >
+        <h2>Unsatisfactory Thoughts'a Hoşgeldiniz</h2>
+            <p>Unsatisfactory Thoughts, kelime anlamından da anlaşılabileceği üzere insanları rahatsız etmek için kurulmuş olan bir blogtur.
+            İnsanlar, anlamadıkları şeylerden korkar ve onlardan kaçma içgüdüsünü barındırır. Basit varlıklardır. Bu blog onları anlamadıkları 
+            şeylerle başbaşa bırakacak ve "Unsatisfactory Thoughts" diye adlandırılan tatmin etmeyen ve rahatsız eden düşüncelerle insanları başbaşa bırakacaktır.</p>
+        </div>
+        {% endblock govde %}
+        
+    
+    </div>
+    
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+            <script>
+                CKEDITOR.replace( 'content' );
+            </script>
+</body>
+</html>
